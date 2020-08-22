@@ -1,0 +1,15 @@
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 375;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+@mixin flex-row {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+@mixin _1170 {
+    @media (min-width: 1170px){
+        @content;
+    }
+}
