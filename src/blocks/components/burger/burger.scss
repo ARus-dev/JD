@@ -2,12 +2,28 @@
     display: none;
     margin: -10px;
     padding: 10px;
+    transition: 0.3s;
+    &_close {
+        transform: rotate(180deg);
+        &>.burger__line {
+            &:first-child {
+                transform: rotate(45deg) translate(6px, 8px);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(4px, -8px);
+            }
+        }
+    }
     @include _1024 {
         display: block;
     }
     &__line {
         background-color: $color-orange;
         height: 3px;
+        transition: 0.3s;
         width: 30px;
         &:nth-child(2) {
             margin: 6px 0;

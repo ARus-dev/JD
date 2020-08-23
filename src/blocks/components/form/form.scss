@@ -1,0 +1,27 @@
+.form {
+    background-color: #545E5F;
+    color: $color-gray-light;
+    flex-direction: column;
+    display: flex;
+    font-size: 18px;
+    padding: 30px;
+    &__input {
+        background: none;
+        border-bottom: 1px solid $color-gray-light;
+        color: #fff;
+        margin-bottom: 10px;
+        outline: none;
+        &:focus + .form__label {
+            transform: scale(0.5) translateY(-108px);
+        }
+    }
+    &__label {
+        transform: translateY(-36px);
+        transform-origin: left;
+        transition: 0.3s;
+        user-select: none;
+        &_active {
+            transform: scale(0.5) translateY(-108px);
+        }
+    }
+}
