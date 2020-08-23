@@ -1,14 +1,68 @@
 .section {
     padding: 84px 0;
+    &_gray {
+        background: url('/img/photo1.png') left bottom no-repeat, 
+                    linear-gradient(170deg, rgba(0,0,0,1) 0%, rgba(84,94,95,1) 0%);
+        background-size: auto 100%;     
+        color: #fff;
+        @include _1200 {
+            background-size: 40% auto;
+        }
+        @include _1024 {
+            background: rgba(84,94,95,1);
+        }
+    }
     @include _768 {
         padding: 30px 0;
         text-align: center;
     }
+    &__content {
+        &_pos {
+            &_right {
+                margin-left: auto;
+                width: 60%;
+                @include _1024 {
+                    margin: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
     &__title {
         @include adaptiv-font(48, 24);
+        margin-bottom: 98px;
+        position: relative;
+        &::before {
+            background-color: $color-gray-light;
+            bottom: -40px;
+            content: '';
+            height: 9px;
+            left: -50px;
+            position: absolute;
+            width: 99px;
+            @include _1024 {
+                content: none;
+            }
+        }
+        &_simple {
+            margin: auto;
+            &::before {
+                content: none;
+            }
+        }
+        &_small {
+            @include adaptiv-font(36, 18);
+        }
+        @include _1024 {
+            margin-bottom: 30px;
+        }
         @include _768 {
             font-weight: 700;
         }
+    }
+    &__subtitle {
+        @include adaptiv-font(18, 14);
+        margin-top: 10px;
     }
     &__cards {
         margin-bottom: 59px;
@@ -20,14 +74,23 @@
     }
     &__text {
         font-weight: 400;
+        line-height: 172%;
         &_big {
             font-size: 24px;
             line-height: 129%;
-            margin-bottom: 69px;
             @include _768 {
                 font-size: 16px;
                 margin-bottom: 15px;
             }
         }
+    }
+    &__text-block {
+        margin: 54px 0;
+        @include _1024 {
+            margin: 30px 0;
+        }
+    }
+    &__btn {
+        margin-top: 68px;
     }
 }
