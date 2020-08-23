@@ -1,0 +1,86 @@
+.header {
+    background-image: url('/img/header-img.png');
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: auto 90%;
+    color: $color-black;
+    @include _1024 {
+        background: #fff;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        padding: 22px 0;
+        @include _1024 {
+            min-height: 50vh;
+        }
+    }
+    &__top {
+        @include flex-row();
+        padding-bottom: 30px;
+        position: relative;
+    }
+    &__menu {
+        display: flex;
+        font-weight: normal;
+        @include _1024 {
+            background: #fff;
+            flex-direction: column;
+            padding: 20px;
+            position: absolute;
+            text-align: center;
+            top: 100%;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: 0.3s;
+            right: 0;
+            width: 100%;
+            &_active { 
+                transform: scaleX(1);
+            }
+        }
+    }
+    &__link {
+        border-bottom: 1px solid transparent;
+        transition: 0.3s;
+        &:not(:last-child) {
+            margin-right: 35px;
+            @include _1366 {
+                margin-right: 15px;
+            }
+            @include _1024 {
+                margin: 0 0 15px 0;
+            }
+        }
+        &:hover {
+            border-bottom: 1px solid $color-black;
+        }
+        @include _1024 {
+            font-size: 24px;
+            font-weight: 500;
+        }
+    }
+    &__body {
+        align-items: center;
+        display: flex;
+        flex-grow: 1;
+    }
+    &__text {
+        width: 55%;
+        @include _1024 {
+            text-align: center;
+            width: 100%;
+        }
+        &>p {
+            color: $color-gray;
+            margin: 68px 0;
+            @include _1366 {
+                margin: 40px 0;
+            }
+        }
+    }
+    &__title {
+        @include adaptiv-font(48, 28);
+    }
+}

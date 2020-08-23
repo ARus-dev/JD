@@ -8,8 +8,13 @@
     display: flex;
     justify-content: space-between;
 }
-@mixin _1170 {
-    @media (min-width: 1170px){
+@mixin _1366 {
+    @media (max-width: 1365px){
+        @content;
+    }
+}
+@mixin _1024 {
+    @media (max-width: 1023px){
         @content;
     }
 }

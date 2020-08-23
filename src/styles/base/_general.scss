@@ -31,3 +31,21 @@ img {
 ul, ol {
 	list-style-type: none;
 }
+
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+}
+.container {
+	margin: 0 auto;
+	width: 1280px;
+	@include _1366 {
+		width: 960px;
+	}
+	@include _1024 {
+		padding: 0 30px;
+		width: 100%;
+	}
+}
