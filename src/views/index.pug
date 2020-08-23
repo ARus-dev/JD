@@ -6,6 +6,33 @@ block variables
 
 block content
 	include ../blocks/modules/header/header
-
+	main
+		section
+			.section
+				.container
+					.section__content
+						h2.section__title Если Вы не знаете как:
+						.section__cards.cards
+							.cards__item
+								.cards__icon
+									+svg('business-office-icon1')
+								p.section__text.cards__text
+									|Кратко, но емко донести до пользователей всю необходимую 
+									|информацию о вашем бизнесе
+							.cards__item
+								.cards__icon
+									+svg('business-office-icon2')
+								p.section__text.cards__text
+									|Использовать визуал как преимущество в условиях жесткой конкурентной борьбы
+							.cards__item
+								.cards__icon
+									+svg('business-office-icon3')
+								p.section__text.cards__text
+									|Увеличить показатели эффективности и улучшить конверсию вашего сайта 
+						p.section__text.section__text_big
+							|Если Вы хотите открыть свой интернет-магазин,запустить сайт или мобильное приложение, 
+							|но не представляете как к этому подступиться — оставьте заявку и получите 
+							span.text_bold бесплатную консультацию
+						button.btn.section__btn Оставить заявку	
 block scripts
 	script(src="js/main.js")

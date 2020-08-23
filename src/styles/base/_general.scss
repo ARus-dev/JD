@@ -49,3 +49,12 @@ body {
 		width: 100%;
 	}
 }
+
+.text {
+	&_block {
+		display: block;
+	}
+	&_bold {
+		font-weight: 700;
+	}
+}
