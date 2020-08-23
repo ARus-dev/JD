@@ -1,0 +1,12 @@
+mixin svg(id)
+    svg
+        use(href="/img/sprites/sprite.svg#" + id)
+
+mixin picture(name, type, path="", alt="")
+    picture
+        source(media="(min-width: 1024px)", srcset="/img/" + path + name + '-desktop.webp', type="image/webp")
+        source(media="(min-width: 1024px)", srcset="/img/" + path + name + '-desktop.' + type)
+        source(media="(min-width: 768px)", srcset="/img/" + path + name + '-tablet.webp', type="image/webp")
+        source(media="(min-width: 768px)", srcset="/img/" + path + name + '-tablet.' + type)
+        source(srcset="/img/" + path + name + '.webp', type="image/webp")
+        img(src="/img/" + path + name + '.' + type, alt=alt)
