@@ -13,6 +13,9 @@
             margin: -10px 0;
         }
     }
+    &_horizontal {
+        margin: -32.5px -27.5px;;
+    }
     &__item {
         align-items: center;
         border: 1px solid $color-gray-light;
@@ -41,6 +44,23 @@
             }
             @include _768 {
                 margin: 10px 0;
+            }
+        }
+        &_hor {
+            border-color: transparent;
+            color: #fff;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin: 32.5px 27.5px;
+            padding-bottom: 0;
+            padding-top: 0;
+            text-align: left;
+            @include _1024 {
+
+            }
+            &>.cards__icon {
+                margin-bottom: 0;
+                margin-right: 18px;
             }
         }
     }

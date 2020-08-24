@@ -12,6 +12,9 @@
             background: rgba(84,94,95,1);
         }
     }
+    &_orange {
+        background-color: $color-orange;
+    }
     @include _768 {
         padding: 30px 0;
         text-align: center;
@@ -47,6 +50,7 @@
         }
         &_simple {
             margin: auto;
+            margin-left: 0;
             &::before {
                 content: none;
             }
@@ -55,9 +59,9 @@
             @include adaptiv-font(36, 18);
         }
         &_white {
-            margin-left: 0;
+            color: #fff;
             &::before {
-                background-color: $color-gray-light;
+                background-color: #fff;
             }
         }
         @include _1024 {
