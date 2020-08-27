@@ -1,0 +1,39 @@
+.questions {
+    &__item {
+        
+    }
+    &__label {
+        align-items: center;
+        border-bottom: 1px solid $color-gray-light;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 18px;
+        text-align: left;
+    }
+    &__title {
+        @include adaptiv-font(24, 18);
+    }
+    &__radio {
+        visibility: hidden;
+        &:checked + .questions__text {
+            max-height: 350px;
+        }
+    }
+    &__icon {
+        &>svg {
+            height: 20px;
+            width: 20px;
+        }
+    }
+    &__text {
+        @include adaptiv-font(18, 14);
+        font-weight: 400;
+        line-height: 150%;
+        margin-bottom: 30px;
+        max-height: 0px;
+        overflow: hidden;
+        text-align: left;
+        transition: 0.3s;
+    }
+}
