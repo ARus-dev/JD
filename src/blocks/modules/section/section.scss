@@ -134,6 +134,12 @@
             grid-template-rows: auto;
         }
     }
+    &__slider {
+        margin-top: -102px;
+        @include _1024 {
+            margin-top: 0;
+        }
+    }
 }
 
 .grid {

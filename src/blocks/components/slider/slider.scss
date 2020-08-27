@@ -1,0 +1,77 @@
+.slider {
+    &__track {
+        height: 500px;
+        position: relative;
+        @include _1366 {
+            height: 400px;
+        }
+        @include _1024 {
+            height: 200px;
+        }
+    }
+    &__slide {
+        @include flex-row();
+        left: 2500px;
+        min-width: 100%;
+        position: absolute;
+        transition: 0.3s;
+        &::before {
+            background-image: url('/img/sprites/sprite.svg#decor');
+            content: '';
+            height: 170px;
+            left: 50%;
+            margin-left: -100px;
+            position: absolute;
+            top: -60px;
+            width: 200px;
+            @include _1024 {
+                content: none;
+            }
+        }
+        &_current {
+            left: 0;
+        }
+    }
+    &__img {
+        border: 1px dotted $color-orange;
+        border-radius: 50%;
+        min-height: 460px;
+        min-width: 460px;
+        padding: 53px;
+        @include _1024 {
+            display: none;
+        }
+    }
+    &__text {
+        @include adaptiv-font(24, 14);
+        font-weight: 400;
+    }
+    &__title {
+        @include adaptiv-font(36, 16);
+        font-weight: 500;
+    }
+    &__subtitle {
+        color: $color-orange;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+    &__btn {
+        border: 1px solid $color-orange;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 42px;
+        outline: none;
+        width: 42px;
+        &:first-child {
+            margin-right: 28px;
+        }
+        &_disable {
+            border-color: $color-gray-light;
+            opacity: 0.5;
+        }
+        &>svg {
+            height: 12px;
+            width: 8px;
+        }
+    }
+}

@@ -244,5 +244,31 @@ block content
 								input.questions__radio#q7(type="radio", name="question")
 								.questions__text
 									|Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempora eligendi adipisci iste nesciunt reprehenderit vero eveniet, qui ex quam expedita beatae vitae enim iusto quibusdam fugit, dolor eum commodi magnam excepturi consequuntur quidem tempore exercitationem ad! Officiis eum ipsum, voluptates deleniti iste deserunt ab maxime ipsa molestias at, consequatur sed cupiditate recusandae doloribus maiores porro fugiat ad? Consectetur, eligendi.								
+		section
+			.section
+				.container
+					.section__content
+						h2.section__title Отзывы
+						.slider.section__slider
+							.slider__track
+								.slider__slide.slider__slide_current
+									.slider__text
+										h3.slider__title Иван Рочкевич
+										p.slider__subtitle Веб-разработчик
+										p Юля прекрасно справилась с задачей создания дизайна технического форума. Были хорошо продуманы цвета, шрифты, расположение элементов сайта. Постоянно была на связи, рекомендую!
+									.slider__img
+										img(src="/img/ivan.png", alt="")
+								.slider__slide
+									.slider__text
+										h3.slider__title Владислав Столыпин
+										p.slider__subtitle Frontend-разработчик
+										p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos dolore sint adipisci libero vero corrupti dolores perferendis voluptate. Aut nemo mollitia iure impedit distinctio facere fugiat dolores, nihil, odit.
+									.slider__img
+										img(src="/img/vladislav.png", alt="")
+							.slider__buttons
+								button.slider__btn.slider__btn_prev
+									+svg("arrow-left")
+								button.slider__btn.slider__btn_next
+									+svg("arrow-right")
 block scripts
 	script(src="js/main.js")
