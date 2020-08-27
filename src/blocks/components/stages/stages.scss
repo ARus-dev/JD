@@ -1,0 +1,87 @@
+.stages {
+    padding-left: 105px;
+    @include _1366 {
+        padding-left: 0;
+    }
+    &__item {
+        position: relative;
+        &:not(:last-child) {
+            height: 250px;
+            margin-bottom: 56px;
+            &::after {
+                background-color: $color-orange;
+                content: '';
+                height: 170px;
+                left: -80px;
+                position: absolute;
+                top: 95px;
+                width: 1px;
+                @media (max-width:1700px) {
+                    height: 83px;
+                    top: 84px;
+                }
+                @include _1366 {
+                    content: none;
+                }
+            }
+            @media (max-width: 1700px) {
+                height: 125px;
+            }
+            @include _1366 {
+                height: auto;
+            }
+            @include _768 {
+                margin-bottom: 15px;
+            }
+        }
+        @include _768 {
+            text-align: left;
+        }
+    }
+    &__title {
+        @include adaptiv-font(32, 18);
+        font-weight: 500;
+        line-height: 109%;
+        margin-bottom: 10px;
+        position: relative;
+        &::before {
+            background-color: $color-orange;
+            border-radius: 50%;
+            content: '';
+            height: 24px;
+            left: -90px;
+            position: absolute;
+            top: 20px;
+            width: 24px;
+            @include _1366 {
+                content: none;
+            }
+        }
+        &::after {
+            border: 1px solid $color-orange;
+            border-radius: 50%;
+            content: '';
+            height: 61px;
+            left: -110px;
+            position: absolute;
+            top: 0;
+            width: 61px;
+            @include _1366 {
+                content: none;
+            }
+        }
+        &_last {
+            &::before {
+                content: none;
+            }
+            &::after {
+                background: url('/img/sprites/sprite.svg#check') center no-repeat, linear-gradient(170deg, rgba(0,0,0,1) 0%, rgba(255,122,57,1) 0%);;
+                background-size: 50%;
+            }
+        }
+    }
+    &__text {
+        @include adaptiv-font(24, 16);
+        font-weight: 400;
+    }
+}

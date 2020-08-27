@@ -35,7 +35,7 @@ block content
 							span.text_bold бесплатную консультацию
 						button.btn.section__btn Оставить заявку
 		section
-			.section.section_gray
+			.section.section_gray#about
 				.container
 					.section__content.section__content_pos_right
 						h2.section__title.section__title_white Обо мне
@@ -48,7 +48,7 @@ block content
 						p.section__text Я не обещаю вам результат за 2 дня, но гарантирую, что он будет отражать индивидуальность и уникальность вашего бизнеса, а также будет простым и понятным для ваших пользователей			
 						button.btn.section__btn Заказать дизайн
 		section
-			.section
+			.section#portfolio
 				.container
 					.section__content
 						h2.section__title Портфолио
@@ -65,7 +65,7 @@ block content
 								img(src="/img/projects/brain-doctor.jpg", alt="Дизайн мобильного приложения для тренировки памяти")
 				button.btn.btn_white Смотреть все
 		section
-			.section
+			.section#services
 				.container
 					.section__content
 						h2.section__title Мои услуги
@@ -116,5 +116,71 @@ block content
 								.cards__icon
 									+svg("icon6")
 								p.cards__text Индивидуальный подход к каждому клиенту			
+		section
+			.section#stages
+				.container
+					.section__content
+						h2.section__title Этапы работы:
+						ul.stages
+							li.stages__item
+								h3.stages__title 1. Исследование
+								p.stages__text Анализ конкурентов и новых тенденций, поиск и разбор примеров
+							li.stages__item
+								h3.stages__title 2. Обсуждение концепции и целей (ТЗ или Бриф) 
+								p.stages__text Этап непосредственного взаимодействия дизайнера и заказчика. Формируется четкая концепция будущего продукта. Прописываются основные пожелания клиента с указанием цели, задач и целевой аудитории
+							li.stages__item
+								h3.stages__title 3. Разработка прототипа
+								p.stages__text Прототип представляет собой эскиз, созданный для визуальной оценки структуры и внешнего облика проекта. Клиент может высказать свое мнение о расположении блоков, элементов и разделов, а также о выбранном стилевом оформлении
+							li.stages__item
+								h3.stages__title 4. Отрисовка главной страницы
+								p.stages__text Главная страница оформляется в фирменном стиле компании (если таковой имеется). 
+									span.text_block При желании заказчика фирменный стиль может быть разработан с нуля. Это условие оговаривается отдельно в техническом задании
+							li.stages__item
+								h3.stages__title 5. Утверждение и согласование главной страницы и общего стиля
+								p.stages__text Внесение необходимых изменений и доработок. 
+									span.text_block Отрисованная главная страница направляется на согласование заказчику. При наличии правок все изменения согласовываются и вносятся в кратчайшие сроки.
+							li.stages__item
+								h3.stages__title.stages__title_last 6. Отрисовка дизайна остальных страниц
+								p.stages__text Исходники с отрисованным дизайном в подготовленном к верстке виде передаются заказчику
+		section
+			.section
+				.container
+					.section__content
+						h2.section__title.section__title_mobile Что Вы получаете
+						.row.row_reverse
+							.row__item
+								h2.section__title.section__title_right Что
+									span.text_block Вы получаете
+								h3.row__title Бесплатная
+									span.text_block консультация
+								p.row__text Просто оставьте заявку и я свяжусь с вами в ближайшее время
+								p.row__number.row__number_orange 01
+							.row__item
+								img(src="/img/consultation.jpg", alt="")
+						.row
+							.row__item
+								img(src="/img/concurents.jpg", alt="")
+							.row__item
+								h3.row__title Анализ
+									span.text_block конкурентов
+								p.row__text Провожу анализ ваших конкурентов. Определяю боли клиентов
+								p.row__number 02
+						.row.row_reverse
+							.row__item
+								h3.row__title Координация действий
+									span.text_block на каждом этапе
+									span.text_block выполнения заказа
+								p.row__text Каждый этап выполнения проекта идет на согласование с заказчиком
+								p.row__number 03
+							.row__item
+								img(src="/img/coordination.jpg", alt="")
+						.row
+							.row__item
+								img(src="/img/garant.jpg", alt="")
+							.row__item
+								h3.row__title Гарантия
+									span.text_block качества
+								p.row__text Ваш проект будет сделан вовремя, соблюдены все пожелания и требования к заказу
+								p.row__number 04						
 block scripts
 	script(src="js/main.js")
