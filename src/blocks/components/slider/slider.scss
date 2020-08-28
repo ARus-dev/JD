@@ -11,12 +11,15 @@
     }
     &__slide {
         @include flex-row();
-        left: 2500px;
+        left: 0;
         min-width: 100%;
         position: absolute;
+        top: 0;
         transition: 0.3s;
+        opacity: 0;
         &::before {
             background-image: url('/img/sprites/sprite.svg#decor');
+            background-repeat: no-repeat;
             content: '';
             height: 170px;
             left: 50%;
@@ -29,7 +32,8 @@
             }
         }
         &_current {
-            left: 0;
+            opacity: 1;
+            z-index: 2;
         }
     }
     &__img {
@@ -54,6 +58,11 @@
         color: $color-orange;
         font-weight: 500;
         margin-bottom: 30px;
+    }
+    &__buttons {
+        @include _768 {
+            margin: 0 auto;
+        }
     }
     &__btn {
         border: 1px solid $color-orange;
