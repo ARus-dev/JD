@@ -54,15 +54,15 @@ block content
 						h2.section__title Портфолио
 				.grid.section__grid
 					.grid__item.grid__item_big
-						img(src="/img/projects/salon-spa.jpg", alt="Дизайн сайта спа-салона")
+						+picture("salon-spa", "jpg", "projects/", "Дизайн сайта спа-салона")
 					.grid__item
-						img(src="/img/projects/hymm.jpg", alt="Дизайн landing page по продаже дезодаранта")
+						+picture("hymm", "jpg", "projects/", "Дизайн landing page по продаже дезодаранта")
 					.grid__item
-						img(src="/img/projects/auto.jpg", alt="Дизайн сайта по аренде автомобилей")
+						+picture("auto", "jpg", "projects/", "Дизайн сайта по аренде автомобилей")
 					.grid__item
-						img(src="/img/projects/boneco.jpg", alt="Дизайн landing page по продаже увлажнителя воздуха")
+						+picture("boneco", "jpg", "projects/", "Дизайн landing page по продаже увлажнителя воздуха")
 					.grid__item
-								img(src="/img/projects/brain-doctor.jpg", alt="Дизайн мобильного приложения для тренировки памяти")
+						+picture("brain-doctor", "jpg", "projects/", "Дизайн мобильного приложения для тренировки памяти")
 				button.btn.btn_white Смотреть все
 		section
 			.section#services
@@ -156,10 +156,10 @@ block content
 								p.row__text Просто оставьте заявку и я свяжусь с вами в ближайшее время
 								p.row__number.row__number_orange 01
 							.row__item
-								img(src="/img/consultation.jpg", alt="")
+								+picture("consultation", "jpg")
 						.row
 							.row__item
-								img(src="/img/concurents.jpg", alt="")
+								+picture("concurents", "jpg")
 							.row__item
 								h3.row__title Анализ
 									span.text_block конкурентов
@@ -173,10 +173,10 @@ block content
 								p.row__text Каждый этап выполнения проекта идет на согласование с заказчиком
 								p.row__number 03
 							.row__item
-								img(src="/img/coordination.jpg", alt="")
+								+picture("coordination", "jpg")
 						.row
 							.row__item
-								img(src="/img/garant.jpg", alt="")
+								+picture("garant", "jpg")
 							.row__item
 								h3.row__title Гарантия
 									span.text_block качества
@@ -257,14 +257,14 @@ block content
 										p.slider__subtitle Веб-разработчик
 										p Юля прекрасно справилась с задачей создания дизайна технического форума. Были хорошо продуманы цвета, шрифты, расположение элементов сайта. Постоянно была на связи, рекомендую!
 									.slider__img
-										img(src="/img/ivan.png", alt="")
+										+picture("ivan", "png")
 								.slider__slide
 									.slider__text
 										h3.slider__title Владислав Столыпин
 										p.slider__subtitle Frontend-разработчик
 										p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos dolore sint adipisci libero vero corrupti dolores perferendis voluptate. Aut nemo mollitia iure impedit distinctio facere fugiat dolores, nihil, odit.
 									.slider__img
-										img(src="/img/vladislav.png", alt="")
+										+picture("vladislav", "png")
 							.slider__buttons
 								button.slider__btn.slider__btn_prev
 									+svg("arrow-left")
