@@ -1,10 +1,9 @@
 .form {
-    background-color: #545E5F;
     color: $color-gray-light;
     flex-direction: column;
     display: flex;
-    font-size: 18px;
-    padding: 30px;
+    @include adaptiv-font(18, 14);
+    padding: 30px 0;
     &__input {
         background: none;
         border-bottom: 1px solid $color-gray-light;
@@ -22,6 +21,44 @@
         user-select: none;
         &_active {
             transform: scale(0.5) translateY(-108px);
+        }
+    }
+    &__radios {
+        margin: 30px 0;
+    }
+    &__radio {
+        margin: 20px 0;
+        &>input {
+            display: none;
+            &:checked + label::after {
+                content: '';
+            }
+        }
+        &>label {
+            cursor: pointer;
+            padding-left: 30px;
+            position: relative;
+            &::before {
+                border: 1px solid $color-orange;
+                border-radius: 50%;
+                content: '';
+                height: 20px;
+                left: 0;
+                margin-top: -10px;
+                position: absolute;
+                top: 50%;
+                width: 20px;
+            }
+            &::after {
+                background-color: $color-orange;
+                border-radius: 50%;
+                height: 10px;
+                left: 6px;
+                margin-top: -4px;
+                position: absolute;
+                top: 50%;
+                width: 10px;
+            }
         }
     }
 }

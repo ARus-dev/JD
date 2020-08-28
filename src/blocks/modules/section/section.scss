@@ -15,6 +15,14 @@
     &_orange {
         background-color: $color-orange;
     }
+    &_last {
+        background: url('/img/photo2.png') 75% bottom no-repeat, 
+                    linear-gradient(170deg, rgba(0,0,0,1) 0%, rgba(84,94,95,1) 0%);
+        color: #fff;
+        @include _1024 {
+            background: rgba(84,94,95,1);
+        }      
+    }
     @include _768 {
         padding: 30px 0;
         text-align: center;
@@ -28,6 +36,26 @@
                     margin: 0;
                     width: 100%;
                 }
+            }
+        }
+        &_flex {
+            align-items: flex-end;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            &::before {
+                border: 1px dotted $color-gray-light;
+                content: '';
+                height: 70%;
+                right: 17px;
+                position: absolute;
+                top: -84px;
+                @include _1024 {
+                    content: none;
+                }
+            }
+            @include _768 {
+                flex-direction: column;
             }
         }
     }
@@ -140,6 +168,16 @@
             margin-top: 0;
         }
     }
+    &__form {
+        width: 40%;
+        @include _1024 {
+            text-align: left;
+            width: 90%;
+        }
+        @include _768 {
+            width: 100%;
+        }
+    }
 }
 
 .grid {
@@ -216,6 +254,26 @@
         }
         @include _768 {
             display: none;
+        }
+    }
+}
+
+.soc {
+    margin: -10px 0;
+    @include _768 {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        width: 100%;
+    }
+    &__item {
+        margin: 10px 0;
+        @include _768 {
+            margin: 0;
+        }
+        &>svg {
+            height: 34px;
+            width: 34px;
         }
     }
 }

@@ -245,7 +245,7 @@ block content
 								.questions__text
 									|Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempora eligendi adipisci iste nesciunt reprehenderit vero eveniet, qui ex quam expedita beatae vitae enim iusto quibusdam fugit, dolor eum commodi magnam excepturi consequuntur quidem tempore exercitationem ad! Officiis eum ipsum, voluptates deleniti iste deserunt ab maxime ipsa molestias at, consequatur sed cupiditate recusandae doloribus maiores porro fugiat ad? Consectetur, eligendi.								
 		section
-			.section
+			.section#reviews
 				.container
 					.section__content
 						h2.section__title Отзывы
@@ -270,5 +270,41 @@ block content
 									+svg("arrow-left")
 								button.slider__btn.slider__btn_next
 									+svg("arrow-right")
+		section
+			.section.section_last
+				.container
+					.section__content.section__content_flex
+						.section__form
+							h2.section__title.section__title_white Остались вопросы?
+							p.section__text Заполните форму ниже, и я обязательно свяжусь с вами в ближайшее время
+							form.form(action="#")
+								input.form__input#name(type="text")
+								label.form__label(for="name") Ваше имя
+								input.form__input#tel(type="tel")
+								label.form__label(for="tel") Номер телефона
+								input.form__input#email(type="email")
+								label.form__label(for="email") Email
+								.form__radios
+									p Предпочтительный способ связи:
+									.form__radio
+										input#forMail(type="radio", name="connect", checked)
+										label(for="forMail") Написать на email
+									.form__radio
+										input#forTel(type="radio", name="connect")
+										label(for="forTel") Перезвонить по телефону
+								button.btn Оставить заявку	
+						.soc
+							.soc__item
+								+svg("telegram")
+							.soc__item
+								+svg("gmail")
+							.soc__item
+								+svg("linkedIn")
+							.soc__item
+								+svg("facebook")
+							.soc__item
+								+svg("behance")
+							.soc__item
+								+svg("instagram")
 block scripts
 	script(src="js/main.js")
